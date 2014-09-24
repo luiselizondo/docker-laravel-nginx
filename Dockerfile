@@ -11,6 +11,9 @@ RUN composer create-project laravel/laravel /var/www --prefer-dist
 RUN chown -R www-data:www-data /var/www/app
 RUN composer global require "phpunit/phpunit=4.2.*"
 
+# Add .copmoser/vendor/bin to the path so we can run phpunit
+ENV PATH /.composer/vendor/bin:$PATH
+
 # Replace the nginx default file that comes with luis/nginx-php
 ADD ./config/default /etc/nginx/sites-available/default
 
