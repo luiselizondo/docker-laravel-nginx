@@ -7,7 +7,7 @@ Based on image luis/nginx-php, this image only adds a new nginx virtual host fil
 	web:
 	  image: luis/laravel-nginx
 	  volumes:
-	    - "./:/var/www/app"
+	    - "./:/var/www"
 	    - "/var/log/myapp:/var/log/supervisor"
 	  ports:
 	    - "80:80"
