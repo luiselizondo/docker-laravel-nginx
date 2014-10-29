@@ -6,7 +6,7 @@ MAINTAINER Luis Elizondo "lelizondo@gmail.com"
 RUN apt-get update
 
 RUN apt-get install -y nodejs npm git
-RUN npm install -g bower grunt
+RUN npm install -g bower grunt-cli
 
 RUN apt-get update --fix-missing
 
